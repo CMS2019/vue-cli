@@ -59,7 +59,7 @@ module.exports = class Creator extends EventEmitter {
     this.run = this.run.bind(this)
 
     const promptAPI = new PromptModuleAPI(this)
-    promptModules.forEach(m => m(promptAPI))
+     .forEach(m => m(promptAPI))  //每个 prompt传入的实参
   }
 
   async create (cliOptions = {}, preset = null) {
